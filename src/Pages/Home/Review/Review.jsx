@@ -27,30 +27,3 @@ const Review = ({ userReview }) => {
 
 export default Review;
 
-
-
-/*  <figure className="px-10 pt-10">
-          <img src={img} alt="Shoes" className="rounded-xl" />
-        </figure> */
-
-
-{/* <div className="card lg:max-w-lg bg-base-100 shadow-xl">
-  <figure className="px-10 pt-10">
-    <img src={service.img} alt="Shoes" className="rounded-xl" />
-  </figure>
-  <div className="card-body items-center text-center">
-    <h2 className="card-title">{service.name}</h2>
-    <p>{service.description}</p>
-  </div>
-</div>; */}
-
-/*  const { stars, review, user, email } = review; */
- 
-
-{/* <Rating
-  className="d-block text-end"
-  readonly
-  initialRating={stars}
-  fullSymbol="fas fa-star text-warning"
-  emptySymbol="far fa-star"
-></Rating> */}
