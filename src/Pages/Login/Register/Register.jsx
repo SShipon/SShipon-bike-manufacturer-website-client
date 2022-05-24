@@ -2,12 +2,13 @@ import React from "react";
 import {
   useCreateUserWithEmailAndPassword,
   useSignInWithGoogle,
+  useUpdateProfile,
 } from "react-firebase-hooks/auth";
 
 import { useForm } from "react-hook-form";
 
-import { Link } from "react-router-dom";
-import auth from "../../../firebse.init.jsx";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init.jsx";
 import Loading from "../../Shared/Loading/Loading.jsx";
 import RegisterAnimation from "../RegisterAnimation/RegisterAnimation.jsx";
 const Register = () => {
@@ -21,15 +22,20 @@ const Register = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const navigate = useNavigate()
+
   let singErrorMessage;
 
-  if (loading || gLoading) {
-    return <Loading></Loading>
+  if (loading || gLoading || updating) {
+    return <Loading></Loading>;
   }
 
-  if (error || gError) {
+  if (error || gError || updateError) {
     singErrorMessage = (
-      <p className="text-red-500">{error?.message || gError?.message}</p>
+      <p className="text-red-500">
+        {error?.message || gError?.message || updateError?.message}
+      </p>
     );
   }
 
@@ -37,18 +43,21 @@ const Register = () => {
     console.log(user, gUser);
   }
 
-  const onSubmit = (data) => {
+  const onSubmit = async data => {
     console.log(data);
-    createUserWithEmailAndPassword(data.email, data.password);
+    await createUserWithEmailAndPassword(data.email, data.password);
+    await updateProfile({ displayName: data.name });
+    console.log('user updated');
+    navigate('/home')
   };
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 flex justify-center">
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 flex justify-center items-center">
       <div className="card lg:max-w-lg">
         <RegisterAnimation></RegisterAnimation>
       </div>
       <div className="card lg:max-w-lg">
-        <div className="flex h-screen justify-center items-center my-16">
+        <div className="flex h-screen justify-center items-center my-20">
           <div className="card w-96 bg-base-100 shadow-xl">
             <div className="card-body">
               <h2 className="text-center text-2xl font-bold text-purple-800">

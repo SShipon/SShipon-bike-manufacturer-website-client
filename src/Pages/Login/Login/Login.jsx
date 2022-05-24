@@ -6,7 +6,7 @@ import {
 import { useForm } from "react-hook-form";
 
 import { Link } from "react-router-dom";
-import auth from "../../../firebse.init.jsx";
+import auth from "../../../firebase.init.jsx";
 import Loading from "../../Shared/Loading/Loading.jsx";
 import LoginAnimation from "../LoginAnimation/LoginAnimation.jsx";
 const Login = () => {
@@ -42,7 +42,7 @@ const Login = () => {
   };
 
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 flex justify-center">
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 flex justify-center items-center">
       <div className="card lg:max-w-lg">
         <div className="flex h-screen justify-center items-center my-16">
           <div className="card w-96 bg-base-100 shadow-xl">
@@ -117,7 +117,7 @@ const Login = () => {
                   </label>
                 </div>
                 {singErrorMessage}
-                <input class="btn w-full max-w-xs" type="Login" value="LOGIN" />
+                <input class="btn w-full max-w-xs" type="submit" value="LOGIN" />
               </form>
               <small>
                 <p>

@@ -1,5 +1,5 @@
 import { useLottie } from "lottie-react";
-import groovyWalkAnimation from "../../../assets/76882-contact-us.json";
+import groovyWalkAnimation from "../../../assets/contact/81967-contact-us.json";
 
 const RegisterAnimation = () => {
   const options = {
