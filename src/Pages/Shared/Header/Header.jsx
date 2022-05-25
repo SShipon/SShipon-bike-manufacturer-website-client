@@ -18,20 +18,24 @@ const [user, loading, error] = useAuthState(auth);
         <Link to="/home">Home</Link>
       </li>
       <li>
-        <Link to="/service">Service</Link>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/review">Review</Link>
+        <Link to="/explore">Explore</Link>
       </li>
       <li>
         <Link to="/contact">Contact</Link>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </li>
       <li>
         {user ? (
-          <button style={{color:'white'}} class="btn btn-ghost" onClick={logout}>
+          <button
+            style={{ color: "white" }}
+            class="btn btn-ghost"
+            onClick={logout}
+          >
             Sign Out
           </button>
         ) : (

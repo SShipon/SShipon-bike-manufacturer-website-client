@@ -5,7 +5,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init.jsx";
 import Loading from "../../Shared/Loading/Loading.jsx";
 import LoginAnimation from "../LoginAnimation/LoginAnimation.jsx";
@@ -22,6 +22,10 @@ const Login = () => {
 
   let singErrorMessage;
 
+  const navigate = useNavigate()
+  const location = useLocation()
+   let from = location.state?.from?.pathname || "/";
+
   if (loading || gLoading) {
     return <Loading></Loading>;
   }
@@ -33,7 +37,7 @@ const Login = () => {
   }
 
   if (user || gUser) {
-    console.log(user, gUser);
+     navigate(from, { replace: true });
   }
 
   const onSubmit = (data) => {

@@ -42,7 +42,7 @@ const CardInfo = () => {
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {
                   services.map(service => <Info
-                      key={service.id}
+                      key={service._id}
                       service={service}
                   ></Info>)
         }
