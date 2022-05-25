@@ -4,7 +4,7 @@ const Brand = () => {
     return (
       <section className='main_container'>
         <h1 className="text-center text-5xl my-5 font-bold text-sky-600 my-12">
-          Best Brand{" "}
+          Best Brand -1{" "}
         </h1>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="card lg:max-w-lg p-4 bg-base-100 shadow-xl">
