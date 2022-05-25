@@ -67,7 +67,7 @@ const [user, loading, error] = useAuthState(auth);
             {menuItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">website-demo</a>
+        <a className="btn btn-ghost normal-case text-xl">Bike-Prats-House</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
