@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About.jsx';
 import AddParts from './Pages/AddParts/AddParts.jsx';
+import Blog from './Pages/Blog/Blog.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import Dashboard from './Pages/Dashboard/Dashboard.jsx';
 import MyOrder from './Pages/Dashboard/MyOrder/MyOrder.jsx';
@@ -32,9 +33,9 @@ function App() {
           }
         ></Route>
         <Route path="/about" element={<About></About>}></Route>
-        <Route path="/addParts" element={<AddParts></AddParts>}></Route>
-        <Route path="/explore" element={<Explore></Explore>}></Route>
+        <Route path="/blog" element={<Blog></Blog>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
+        <Route path="/explore" element={<Explore></Explore>}></Route>
         <Route
           path="/dashboard"
           element={
@@ -44,6 +45,7 @@ function App() {
           }
         >
           <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path="addParts" element={<AddParts></AddParts>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
         </Route>

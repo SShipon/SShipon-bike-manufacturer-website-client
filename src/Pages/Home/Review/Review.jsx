@@ -6,12 +6,12 @@ const Review = ({ userReview }) => {
     return (
       <div className="card lg:max-w-lg bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-          <img style={{borderRadius:'50%'}} src={photo} alt="Shoes" className="rounded-xl" />
+          <img style={{width:'130px',height:'130px',borderRadius:'50%'}} src={photo} alt="Shoes" className="rounded-xl" />
         </figure>
-        <div className="card-body items-center text-center">
+        <div className="card-body items-center ">
           <h1 className="card-title">{user}</h1>
-          <p>{email}</p>
-          <h2 className="card-title">{review}</h2>
+          <h5 className='text-1xl font-semibold'>{email}</h5>
+          <p >{review.slice(0,100)}</p>
           <Rating
             className="d-block text-end"
             readonly
