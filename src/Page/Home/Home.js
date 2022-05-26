@@ -1,23 +1,23 @@
 import React from 'react';
-import ContactUs from '../ContactUs/ContactUs';
 import ReviewCard from '../Dashboard/ReviewCard';
 import Products from '../Products/Products';
-import Banner from './Banner';
-import BusinessSummery from './BusinessSummery';
+import Banner from './Banner/Banner.jsx';
+import Brand from './Brand/Brand.jsx';
+import CardInfo from './CardInfo/CardInfo.jsx';
+import Projects from './Projects/Projects.jsx';
 
 const Home = () => {
     return (
-        <div>
-          
-            <Products></Products>
-            <BusinessSummery></BusinessSummery>
-            <ReviewCard></ReviewCard>
-            
-        </div>
+      <div className="max-w-7xl mx-auto px-12">
+        <Banner></Banner>
+        <Products></Products>
+        <CardInfo></CardInfo>
+        <Projects></Projects>
+        <ReviewCard></ReviewCard>
+        <Brand></Brand>
+      </div>
     );
 };
 
 export default Home;
 
-
-/* const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jgbqt.mongodb.net/?retryWrites=true&w=majority`; */

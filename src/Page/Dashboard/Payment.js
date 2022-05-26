@@ -1,12 +1,13 @@
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js'
 import React from 'react';
-import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import CheckoutFrom from './CheckoutFrom';
 import Loading from '../Shared/Loading';
-
-const stripePromise = loadStripe('pk_test_51L42E3KpCfeDjJCAhXqtEWyaXoq7sqI3sCrzqFA0P260ezaanN96EQbfVKpcLuKSkKB0JV2UVGiJAdeIuT6Q0FcV00RJ9zaTRR');
+import { useQuery } from 'react-query';
+const stripePromise = loadStripe(
+  "pk_test_51L4ZV2GMgR7IvukHJQVXN4nUPglHpydrLkHQlRwQ8JnxAxwVq1h4EM8X9xflA0gnBsI1oc8rduCaRTPstQZHfmiW00scukA4Nl"
+);
 
 
 const Payment = () => {

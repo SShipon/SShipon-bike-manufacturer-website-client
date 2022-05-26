@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import About from "./Page/About/About.jsx";
 import AllParts from "./Page/AllParts/AllParts";
 import Login from "./Page/Authentication/Login";
 import Register from "./Page/Authentication/Register";
@@ -16,19 +17,21 @@ import MyOrder from "./Page/Dashboard/MyOrder";
 import Myprofile from "./Page/Dashboard/Myprofile";
 import MyReview from "./Page/Dashboard/MyReview";
 import Payment from "./Page/Dashboard/Payment";
-import Footer from "./Page/Footer/Footer";
 import Header from "./Page/Header/Header";
 import Home from "./Page/Home/Home";
 import Information from "./Page/Information/Information";
-import NoteFound from "./Page/NotFound/NoteFound";
+import Footer from "./Page/Shared/Footer/Footer.jsx";
+import NotFound from "./Page/Shared/NotFound/NotFound.jsx";
+
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="Home" element={<Home></Home>}></Route>
+        <Route path="about" element={<About></About>}></Route>
         <Route path="parts" element={<AllParts></AllParts>}></Route>
         <Route
           path="product/:id"
@@ -90,9 +93,10 @@ function App() {
         <Route path="blogs" element={<Blogs></Blogs>}></Route>
         <Route path="login" element={<Login></Login>}></Route>
         <Route path="register" element={<Register></Register>}></Route>
-        <Route path="*" element={<NoteFound></NoteFound>}></Route>
+       <Route path="*" element={<NotFound></NotFound>}></Route>
+        
       </Routes>
-      <Footer></Footer>
+       <Footer></Footer>
     </div>
   );
 }

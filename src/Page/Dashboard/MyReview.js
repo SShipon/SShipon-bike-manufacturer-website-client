@@ -13,12 +13,12 @@ const MyReview = () => {
         gray: "#a9a9a9"
     }
 
-    const [currentValue, setCurrentvalue] = useState(0);
+    const [currentValue, setCurrentValue] = useState(0);
     const [user] = useAuthState(auth);
     const {id} = useParams();
     
     const handleClick = value =>{
-        setCurrentvalue(value)
+        setCurrentValue(value)
     };
     const handleSubmit = event =>{
         event.preventDefault();
@@ -44,6 +44,7 @@ const MyReview = () => {
               Swal.fire("Thank you!!", "Your review succed", "success");
             }
           });
+         
 
     }
 
@@ -64,7 +65,7 @@ const MyReview = () => {
                     }
                 </div>
                 <form onSubmit={handleSubmit}>
-                <textarea className="textarea textarea-bordered" name='feedback' placeholder="What's your feedback"></textarea>
+                <textarea className="textarea textarea-bordered px-12" name='feedback' placeholder="What's your feedback"></textarea>
                 <br />
                 <button className='btn btn-success w-full mt-4'>Submit</button>
                 </form>

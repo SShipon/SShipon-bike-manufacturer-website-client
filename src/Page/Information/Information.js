@@ -90,7 +90,7 @@ const Information = () => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title text-4xl text-purple-400 font-bold mb-4">{product.name}</h2>
-                    <p className='text-xl font-bold'>Stock: <span className='text-green-400'>{product.quantity}</span></p>
+                    <p className='text-xl font-bold'>Stock:{product.stock} <span className='text-green-400'>{product.quantity}</span></p>
                     <p className='text-xl font-bold'>Menimum order: <span className='text-green-400'>30</span></p>
                     <div className="col-xl-1">
                         <div className="input-group">
