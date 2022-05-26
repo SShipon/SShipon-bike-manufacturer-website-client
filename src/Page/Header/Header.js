@@ -14,7 +14,7 @@ const Header = () => {
 
     const navItems = <>
         <li><Link to='/Home'>HOME</Link></li>
-        <li><Link to='/parts'>PARTS</Link></li>
+        <li><Link to='/parts'>EXPLORE</Link></li>
         <li><Link to='/about'>ABOUT</Link></li>
         <li><Link to='/blogs'>BLOGS</Link></li>
         {

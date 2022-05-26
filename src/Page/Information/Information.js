@@ -48,7 +48,7 @@ const Information = () => {
     };
 
 
-    const total2 = parseInt(num) * parseInt(product.prize);
+    const total2 = parseInt(num) * parseInt(product.price);
     const navigete = useNavigate();
 
     const handleOrder = event => {
@@ -116,8 +116,8 @@ const Information = () => {
                         <input type="email" name="email" disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
                         <h4 className='text-xl font-bold mb-2'>Phone number</h4>
                         <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" required/>
-                        <h4 className='text-xl font-bold mb-2'>Prize</h4>
-                        <input type="text" disabled value={product.prize} placeholder="Product quantity" className="input input-bordered w-full max-w-xs" />
+                        <h4 className='text-xl font-bold mb-2'>Price</h4>
+                        <input type="text" disabled value={product.price} placeholder="Product quantity" className="input input-bordered w-full max-w-xs" />
                         <h4 className='text-xl font-bold mb-2'>Product quantity</h4>
                         <input type="text" disabled value={num} placeholder="prize" className="input input-bordered w-full max-w-xs mb-4" />
                         <h4 className='text-xl font-bold mb-2'>Total amount</h4>
