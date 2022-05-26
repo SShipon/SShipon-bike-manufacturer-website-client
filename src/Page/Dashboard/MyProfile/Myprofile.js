@@ -71,7 +71,7 @@ const MyProfile = () => {
           className="input input-bordered  w-full max-w-xs"
         />
         <label className="label">
-          <span className="label-text">Education</span>
+          <span className="label-text">Education:</span>
         </label>
         <input
           type="text"

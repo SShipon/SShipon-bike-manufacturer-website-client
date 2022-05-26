@@ -18,24 +18,24 @@ const Blogs = () => {
           </div>
           <div>
             <h5 className="text-2xl font-semibold">
-              2. What are the different ways to manage a state in a React
+              2. What  are the different ways to manage a state in a React
               application?
             </h5>
             <p>
               There are four main types of state you need to properly manage in
-              your React apps: Local (UI) state – Local state is data we manage
+              your React apps: Local (UI).  state – Local state is data we manage
               in one or another component. Global (UI) state– Global state is
               data we manage across multiple components. Server state– Data that
               comes from an external server that must be integrated with our UI
               state. URL state– Data that exists on our URLs, including the
               pathname and query parameters. There are many more elements, but
               these are the major categories worth focusing on for most
-              applications you build.
+              applications you build build.
             </p>
           </div>
           <div>
             <h5 className="text-2xl font-semibold">
-              3.How does prototypical inheritance work?
+              3.How does prototypical inheritance work ?
             </h5>
             <p>
               3.How does prototypical inheritance work? Every object with its
@@ -46,7 +46,7 @@ const Blogs = () => {
               of another object. Traditionally, in order to get and set the
               [[Prototype]] of an object, we use Object.getPrototypeOf and
               Object.setPrototypeOf. Nowadays, in modern language, it is being
-              set using _proto_.
+              set using _proto_ ....
             </p>
           </div>
           <div>
