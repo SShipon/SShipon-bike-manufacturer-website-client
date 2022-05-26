@@ -27,4 +27,8 @@
 * react-firebase-hooks 
 * react-bootstrap
 * react-revel
+<<<<<<< HEAD
 * react-router-dom# manufacturer-website-client-side-SShipon
+=======
+* react-router-dom
+>>>>>>> 7b1a9f9dab2c6bd8a4446b067770ce3328436fc9
