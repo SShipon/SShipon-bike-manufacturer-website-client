@@ -1,58 +1,96 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import About from './Pages/About/About.jsx';
-import AddParts from './Pages/AddParts/AddParts.jsx';
-import Blog from './Pages/Blog/Blog.jsx';
-import Contact from './Pages/Contact/Contact.jsx';
-import Dashboard from './Pages/Dashboard/Dashboard.jsx';
-import MyOrder from './Pages/Dashboard/MyOrder/MyOrder.jsx';
-import MyProfile from './Pages/Dashboard/MyProfile/MyProfile.jsx';
-import Explore from './Pages/Explore/Explore.jsx';
-import AddReview from './Pages/Home/AddReview/AddReview.jsx';
-import Home from './Pages/Home/Home.jsx';
-import Login from './Pages/Login/Login/Login.jsx';
-import Register from './Pages/Login/Register/Register.jsx';
-import RequireAuth from './Pages/Login/RequireAuth/RequireAuth.js';
-import ProductDetails from './Pages/ProductDetails/ProductDetails.jsx';
-import Footer from './Pages/Shared/Footer/Footer.jsx';
-import Header from './Pages/Shared/Header/Header.jsx';
-import NotFound from './Pages/Shared/NotFound/NotFound.jsx';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import AllParts from "./Page/AllParts/AllParts";
+import Login from "./Page/Authentication/Login";
+import Register from "./Page/Authentication/Register";
+import RequireAdmin from "./Page/Authentication/RequireAdmin";
+import RequireAuth from "./Page/Authentication/RequireAuth";
+import Blogs from "./Page/Blogs/Blogs";
+import Addproduct from "./Page/Dashboard/Addproduct";
+import Dashboard from "./Page/Dashboard/Dashboard";
+import LoadProfile from "./Page/Dashboard/LoadProfile";
+import MakeAdmin from "./Page/Dashboard/MakeAdmin";
+import Manageorder from "./Page/Dashboard/Manageorder";
+import Manageproduct from "./Page/Dashboard/Manageproduct";
+import MyOrder from "./Page/Dashboard/MyOrder";
+import Myprofile from "./Page/Dashboard/Myprofile";
+import MyReview from "./Page/Dashboard/MyReview";
+import Payment from "./Page/Dashboard/Payment";
+import Footer from "./Page/Footer/Footer";
+import Header from "./Page/Header/Header";
+import Home from "./Page/Home/Home";
+import Information from "./Page/Information/Information";
+import NoteFound from "./Page/NotFound/NoteFound";
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="Home" element={<Home></Home>}></Route>
+        <Route path="parts" element={<AllParts></AllParts>}></Route>
         <Route
-          path="/product/:productId"
+          path="product/:id"
           element={
             <RequireAuth>
-              <ProductDetails></ProductDetails>
+              <Information></Information>
             </RequireAuth>
           }
         ></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/blog" element={<Blog></Blog>}></Route>
-        <Route path="/contact" element={<Contact></Contact>}></Route>
-        <Route path="/explore" element={<Explore></Explore>}></Route>
         <Route
-          path="/dashboard"
+          path="dashboard"
           element={
             <RequireAuth>
-              <Dashboard />
+              <Dashboard></Dashboard>
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrder></MyOrder>}></Route>
-          <Route path="addParts" element={<AddParts></AddParts>}></Route>
-          <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="review" element={<AddReview></AddReview>}></Route>
+          <Route index element={<Myprofile></Myprofile>}></Route>
+          <Route
+            path="myprofile/loadprofile"
+            element={<LoadProfile></LoadProfile>}
+          ></Route>
+          <Route path="order" element={<MyOrder></MyOrder>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
+          <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route
+            path="manageorder"
+            element={
+              <RequireAdmin>
+                <Manageorder></Manageorder>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="addproduct"
+            element={
+              <RequireAdmin>
+                <Addproduct></Addproduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="manageproduct"
+            element={
+              <RequireAdmin>
+                <Manageproduct></Manageproduct>
+              </RequireAdmin>
+            }
+          ></Route>
+          <Route
+            path="makeadmin"
+            element={
+              <RequireAdmin>
+                <MakeAdmin></MakeAdmin>
+              </RequireAdmin>
+            }
+          ></Route>
         </Route>
-
-        <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/register" element={<Register></Register>}></Route>
-        <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route path="blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="login" element={<Login></Login>}></Route>
+        <Route path="register" element={<Register></Register>}></Route>
+        <Route path="*" element={<NoteFound></NoteFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
