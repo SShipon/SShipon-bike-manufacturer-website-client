@@ -1,12 +1,10 @@
-.bg-color{
-    background-color: rgb(8, 9, 9);
-}
-.bg-color a{
-    color: #ffff;
-    font-weight: 600;
-}
-.bg-color a:hover{
-    color: #ffff;
-    font-weight: 600;
-    color: orange;
+ .background_bg{
+    background-color: rgb(5, 49, 49) !important;
+} 
+ .background_bg a{
+    color: #ffffff !important;
+} 
+.svg_icon{
+  color: #ffffff !important;
+  
 }

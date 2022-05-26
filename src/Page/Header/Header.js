@@ -31,7 +31,7 @@ const Header = () => {
 
     </>
     return (
-      <div className="navbar bg-color">
+      <div className="navbar background_bg">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex="0" className="btn  lg:hidden">
@@ -52,7 +52,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex="0"
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow background_bg rounded-box"
             >
               {navItems}
             </ul>

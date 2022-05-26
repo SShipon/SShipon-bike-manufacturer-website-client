@@ -29,8 +29,8 @@ const Payment = () => {
         <div className="card lg:card-side bg-base-100 shadow-xl mx-12 p-12 mt-12">
             <div className='mx-12 text-center'>
                 <h2 className='uppercase text-teal-600 text-2xl font-bold mx-8 mt-4 mb-4 '>Hello... {product?.customerName}</h2>
-                <h3 className='font-bold text-xl mb-2'><span className='text-green-400'>Product Name:</span> {product?.productName}</h3>
-                <h3 className='font-bold text-xl'><span className='text-green-400'>Please Pay for:</span> ${product?.totalPrize}</h3>
+                <h3 className='font-bold text-xl mb-2'><span className='text-green-400'>Product Name:</span> {product?.productName.slice(0,10)}..more</h3>
+                <h3 className='font-bold text-xl'><span className='text-green-400'>Please Pay for:</span> ${product?.totalPrize}.</h3>
             </div>
             <div className="divider lg:divider-horizontal"></div> 
             <div className="card-body">
