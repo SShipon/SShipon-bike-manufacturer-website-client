@@ -1,0 +1,51 @@
+[
+  {
+    
+    "name": "EVS Epic Knee Pads",
+    "price": "270",
+    "order":"15",
+    "stock":"250",
+    "description": "But we do not just stand out with our special dedicated online shop, where you, as a dealer or as a workshop operator, can buy motorbike parts directly from the wholesalers.",
+    "img": "https://i.ibb.co/6Z7rdrm/evs-epic-knee-pads-500x500-removebg-preview.png"
+  },
+  {
+    "name": "Michelin Tyres",
+    "price": "320",
+    "order": "14",
+    "stock": "240",
+    "description": "But we do not just stand out with our special dedicated online shop, where you, as a dealer or as a workshop operator, can buy motorbike parts directly from the wholesalers. ",
+    "img": "https://i.ibb.co/2dmKM7k/michelin-tyres-removebg-preview.png"
+  },
+  {
+    "name": "BMC Air Filters",
+    "price": "150",
+    "order": "70",
+    "stock": "170",
+    "description": "But we do not just stand out with our special dedicated online shop, where you, as a dealer or as a workshop operator, can buy motorbike parts directly from the wholesalers.",
+    "img": "https://i.ibb.co/c3Kpc5K/bmc-removebg-preview.png"
+  },
+  {
+    "name": "KTM CNC Alumninium",
+    "price": "180",
+    "order": "26",
+    "stock": "190",
+    "description": "But we do not just stand out with our special dedicated online shop, where you, as a dealer or as a workshop operator, can buy motorbike parts directly from the wholesalers. ",
+    "img": "https://i.ibb.co/mzjwN9G/2022-04-20-12-52-48-ZXDjwpicm-Nproduct-removebg-preview-1.png"
+  },
+  {
+    "name": "Shark SPARTAN GT CARBON Helmet",
+    "price": "100",
+    "order": "29",
+    "stock": "255",
+    "description": "We always do that beyond the purchase, because  This helps to make sure that you will be completely satisfied with us and the spare parts ",
+    "img": "https://i.ibb.co/dsvPVmY/Shark-SPARTAN-GT-CARBON-Kro-removebg-preview.png"
+  },
+  {
+    "name": "Bike Spare Parts ",
+    "price": "300",
+    "order": "33",
+    "stock": "245",
+    "description": "Whether you are looking for a single, rare spare part for the motorcycle or larger quantities - we at Double R are the right motorcycle parts distributor for you",
+    "img": "https://i.ibb.co/VY1YXPR/bike-spare-parts-500x500-removebg-preview.png"
+  }
+]

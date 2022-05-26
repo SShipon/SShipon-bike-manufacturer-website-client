@@ -1,0 +1,49 @@
+.card-box{
+    background-color: rgb(250, 245, 243);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.042);
+    box-shadow: 0px 8px 15px rgba(242, 124, 56, 0.098);
+    transition: all 0.3s ease 0s;
+}
+.card-box:hover {
+    box-shadow: 0px 15px 20px rgba(80, 80, 80, 0.15);
+    transform: translateY(-7px);
+    color: rgb(14, 66, 66);
+  }
+.card-box h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+.card-box p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+.button {
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 550;
+    color: rgb(255, 255, 255);
+    background-color: #2EE59D;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.154);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .button:hover {
+    box-shadow: 0px 15px 20px rgba(46, 229, 156, 0.416);
+    transform: translateY(-7px);
+  }
