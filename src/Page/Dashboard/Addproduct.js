@@ -28,7 +28,7 @@ const Addproduct = () => {
                     img: image
                 }
 
-                const url = `http://localhost:5000/addproduct`;
+                const url = `https://immense-reef-29849.herokuapp.com/addproduct`;
                 fetch(url, {
                     method: 'POST',
                     body: JSON.stringify(product),

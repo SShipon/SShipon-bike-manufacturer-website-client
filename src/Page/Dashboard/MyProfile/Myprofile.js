@@ -11,12 +11,15 @@ const MyProfile = () => {
   
 
   useEffect(() => {
-    fetch(`http://localhost:5000/profile?email=${user?.email}`, {
-      method: "GET",
-      headers: {
-        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      },
-    })
+    fetch(
+      `https://immense-reef-29849.herokuapp.com/profile?email=${user?.email}`,
+      {
+        method: "GET",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setProfile(data));
   }, [user?.email]);

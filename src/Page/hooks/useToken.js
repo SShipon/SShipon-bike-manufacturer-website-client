@@ -6,13 +6,16 @@ const useToken = user => {
             const email = user?.user?.email;
             const recentUser = {email: email};
             if(email){
-                fetch(`http://localhost:5000/user/${email}`, {
-                  method: "PUT",
-                  headers: {
-                    "content-type": "application/json",
-                  },
-                  body: JSON.stringify(recentUser),
-                })
+                fetch(
+                  `https://immense-reef-29849.herokuapp.com/user/${email}`,
+                  {
+                    method: "PUT",
+                    headers: {
+                      "content-type": "application/json",
+                    },
+                    body: JSON.stringify(recentUser),
+                  }
+                )
                   .then((res) => res.json())
                   .then((data) => {
                     const token = data.token;

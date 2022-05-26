@@ -13,7 +13,7 @@ const Manageproduct = () => {
     useEffect(() => {
 
         const getItem = async () => {
-            const url = `http://localhost:5000/manageproduct`;
+            const url = `https://immense-reef-29849.herokuapp.com/manageproduct`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -44,7 +44,7 @@ const Manageproduct = () => {
         }).then((result) => {
 
             if (result.value) {
-                const url = `http://localhost:5000/product/${id}`;
+                const url = `https://immense-reef-29849.herokuapp.com/product/${id}`;
                 console.log(url)
                 fetch(url, {
                     method: 'DELETE'
