@@ -13,7 +13,7 @@ const Blogs = () => {
               state local where necessary. Memoizing React components to prevent
               unnecessary re-renders. Code-splitting in React using dynamic
               import() Windowing or list virtualization in React. Lazy loading
-              images in React.
+              images in React..
             </p>
           </div>
           <div>
