@@ -9,7 +9,9 @@ const ReviewCard = () => {
     const [reviews, setReviews] = useState([]);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/review?email=${user?.email}`)
+        fetch(
+          `https://immense-hollows-01823.herokuapp.com/review?email=${user?.email}`
+        )
           .then((res) => res.json())
           .then((data) => setReviews(data));
 

@@ -9,7 +9,7 @@ const Manageorder = () => {
 
     useEffect(() => {
         if (user) {
-            const url = `http://localhost:5000/allorder?customerEmail=${user?.email}`;
+            const url = `https://immense-hollows-01823.herokuapp.com/allorder?customerEmail=${user?.email}`;
             fetch(url)
                 .then(res => res.json())
                 .then(data => setProducts(data))
@@ -28,7 +28,7 @@ const Manageorder = () => {
           }).then((result) => {
 
         if (result.value) {
-            const url = `http://localhost:5000/order/${id}`;
+            const url = `https://immense-hollows-01823.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -24,7 +24,7 @@ const Review = ({ review }) => {
           </figure>
           <div className="card-body">
             <h2 className="text-center font-bold text-xl">{name}</h2>
-            <h2 className="text-center font-bold text-xl">{email}</h2>
+            <h6 className="text-center font-bold text-xl">{email}</h6>
             <p className="flex mx-5 mb-3">
               {stars.map((_, index) => {
                 return (
