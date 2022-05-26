@@ -19,6 +19,7 @@
     "react-firebase-hooks": "^5.0.3",
     "react-hook-form": "^7.31.2",
     "react-lottie": "^1.2.3",
+    "react-rating": "^2.0.5",
     "react-router-dom": "6",
     "react-scripts": "5.0.1",
     "react-visibility-sensor": "^5.1.1",

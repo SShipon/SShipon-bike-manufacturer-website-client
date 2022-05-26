@@ -1,11 +1,7 @@
 import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import auth from "../../../firebase.init.jsx";
-import'./AddReview.css'
-const AddReview = () => {
-  const [user, loading, error] = useAuthState(auth);
-  console.log(user);
+
+const AddParts = () => {
   const {
     register,
     reset,
@@ -14,9 +10,9 @@ const AddReview = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/reviews", {
+    fetch("http://localhost:5000/bikeAdd", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: { "content-type":"application/json" },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
@@ -26,48 +22,48 @@ const AddReview = () => {
   };
   return (
     <div className="card lg:max-w-lg mx-auto  p-2 shadow-lg justify-center items-center my-10">
-      <h3 className="text-center text-3xl my-5 font-semibold text-emerald-500">
-        Customer Feedback
-      </h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
+          {...register("name")}
+          placeholder="Product Name"
           className="p-2 my-1 w-100"
-          placeholder="Enter your name"
-          defaultValue={user?.displayName}
-          {...register("user")}
         />
         <br />
         <input
+          {...register("price")}
+          placeholder="Price"
           className="p-2 my-1 w-100"
-          placeholder="Enter Your Email"
-          defaultValue={user?.email}
-          {...register("email")}
         />
         <br />
         <input
+          {...register("stock")}
+          placeholder="Quantity"
           className="p-2 my-1 w-100"
-          placeholder="write your review, maximum 100 characters"
-          {...register("review", { required: true, maxLength: 100 })}
         />
         <br />
         <input
+          {...register("order")}
+          placeholder="Order"
           className="p-2 my-1 w-100"
-          type="number"
-          placeholder="Give a rating between 0 to 5"
-          {...register("stars", { min: 0, max: 5, required: true })}
         />
         <br />
         <input
+          {...register("description")}
+          placeholder="Description"
           className="p-2 my-1 w-100"
-          placeholder="photoUrl"
-          defaultValue={user?.photoURL}
-          {...register("photo")}
+        />
+        <br />
+        <input
+          {...register("image", { required: true })}
+          placeholder="Image Link"
+          className="p-2 my-1 w-100"
         />
         {errors.exampleRequired && <span>This field is required</span>}
+
         <p className="w-50 m-auto p-2">
           <input
             type="submit"
-            value="Give Review"
+            value="Add A bike"
             className="btn d-block m-auto px-3"
           />
         </p>
@@ -76,4 +72,4 @@ const AddReview = () => {
   );
 };
 
-export default AddReview;
+export default AddParts;

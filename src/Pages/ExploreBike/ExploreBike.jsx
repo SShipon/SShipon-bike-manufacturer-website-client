@@ -27,7 +27,7 @@ const ExploreBike = ({ product }) => {
             <span className="text-purple-700 font-bold"> {price}/pcs</span>
           </h5>
           <p>
-            <span className="font-semibold">MOQ: </span> {order}
+            <span className="font-semibold">Minimum-quantity: </span> {order}
           </p>
           <p>
             <span className="font-semibold">Available Quantity:</span> {stock}

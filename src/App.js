@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Pages/About/About.jsx';
+import AddParts from './Pages/AddParts/AddParts.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import Dashboard from './Pages/Dashboard/Dashboard.jsx';
 import Explore from './Pages/Explore/Explore.jsx';
@@ -29,6 +30,7 @@ function App() {
           }
         ></Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path='/addParts' element={<AddParts></AddParts>}></Route>
         <Route path="/explore" element={<Explore></Explore>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>

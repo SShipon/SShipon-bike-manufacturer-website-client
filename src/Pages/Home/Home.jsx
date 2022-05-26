@@ -4,6 +4,7 @@ import Brand from './Brand/Brand.jsx';
 import CardInfo from './CardInfo/CardInfo.jsx';
 import Products from './Products/Products.jsx';
 import Projects from './Projects/Projects.jsx';
+import Reviews from './Reviews/Reviews.jsx';
 import Simple from './Simple/Simple.jsx';
 
 
@@ -15,7 +16,9 @@ const Home = () => {
         <CardInfo></CardInfo>
         <Projects></Projects>
         <Simple></Simple>
+        <Reviews></Reviews>
         <Brand></Brand>
+        
       </div>
     );
 };

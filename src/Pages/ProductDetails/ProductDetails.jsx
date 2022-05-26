@@ -44,8 +44,6 @@ const ProductDetails = () => {
                   {product.stock}
                 </p>
               </div>
-
-              <button class="btn btn-block btn-primary">Buy Now</button>
             </div>
           </div>
         </div>
