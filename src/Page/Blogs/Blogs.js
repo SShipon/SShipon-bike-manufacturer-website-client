@@ -46,7 +46,7 @@ const Blogs = () => {
               of another object. Traditionally, in order to get and set the
               [[Prototype]] of an object, we use Object.getPrototypeOf and
               Object.setPrototypeOf. Nowadays, in modern language, it is being
-              set using _proto_ ....
+              set using _proto.
             </p>
           </div>
           <div>
