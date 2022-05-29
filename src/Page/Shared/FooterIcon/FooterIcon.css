@@ -1,0 +1,50 @@
+
+.main-footer {
+  list-style: none;
+  padding: 0;
+}
+.main-footer li {
+  display: inline-block;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.card {
+  text-align: center;
+}
+
+.header-text {
+  letter-spacing: 5px;
+  font-size: 46px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.mini-text{
+  font-size: 23px;
+  letter-spacing: 3px;
+  margin: 60px 0;
+}
+.main-footer li {
+  margin: 0 6px;
+}
+.main-footer li i {
+  font-size: 20px;
+  padding: 15px;
+
+  border-radius: 30px;
+}
+
+.main-footer li:nth-child(1) i {
+  background-color: #69b7cf;
+}
+.main-footer li:nth-child(2) i {
+  background-color: #7a92ca;
+}
+
+.main-footer li:nth-child(3) i {
+  background-color: #89BF93;
+}
+.main-footer li:nth-child(4) i {
+  background-color: #C289A4;
+}
