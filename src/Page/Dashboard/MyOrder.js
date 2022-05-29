@@ -12,7 +12,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            const url = `https://immense-hollows-01823.herokuapp.com/order?customerEmail=${user?.email}`;
+            const url = `http://localhost:5000/order?customerEmail=${user?.email}`;
             fetch(url, {
                 method: 'GET',
                 headers:{
@@ -44,7 +44,7 @@ const MyOrder = () => {
           }).then((result) => {
 
         if (result.value) {
-            const url = `https://immense-hollows-01823.herokuapp.com/order/${id}`;
+            const url = `http://localhost:5000/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

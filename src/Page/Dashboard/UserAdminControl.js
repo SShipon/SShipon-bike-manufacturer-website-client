@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 const UserAdminControl = ({user,index, refetch}) => {
     const {email, role} = user;
     const makeAdmin = () =>{
-        fetch(`https://immense-hollows-01823.herokuapp.com/admin/${email}`, {
+        fetch(`http://localhost:5000/admin/${email}`, {
           method: "PUT",
           headers: {
             authorization: `Bearer ${localStorage.getItem("accessToken")}`,

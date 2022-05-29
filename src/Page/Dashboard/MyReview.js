@@ -31,7 +31,7 @@ const MyReview = () => {
             customerFeedback: feedback
         }
 
-        fetch(`https://immense-hollows-01823.herokuapp.com/review/${id}`, {
+        fetch(`http://localhost:5000/review/${id}`, {
           method: "POST",
           headers: {
             "content-type": "application/json",

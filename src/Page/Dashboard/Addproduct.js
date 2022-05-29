@@ -28,7 +28,7 @@ const Addproduct = () => {
                     img: image
                 }
 
-                const url = `https://immense-hollows-01823.herokuapp.com/addproduct`;
+                const url = `http://localhost:5000/addproduct`;
                 fetch(url, {
                     method: 'POST',
                     body: JSON.stringify(product),

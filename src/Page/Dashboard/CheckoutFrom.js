@@ -15,17 +15,14 @@ const CheckoutFrom = ({ product }) => {
 
     useEffect(() => {
 
-        fetch(
-          "https://immense-hollows-01823.herokuapp.com/create-payment-intent",
-          {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-            },
-            body: JSON.stringify({ totalPrize }),
-          }
-        )
+        fetch("http://localhost:5000/create-payment-intent", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+          body: JSON.stringify({ totalPrize }),
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data?.clientSecret) {
@@ -83,7 +80,7 @@ const CheckoutFrom = ({ product }) => {
                 product : _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://immense-hollows-01823.herokuapp.com/order/${_id}`, {
+            fetch(`http://localhost:5000/order/${_id}`, {
               method: "PATCH",
               headers: {
                 "content-type": "application/json",
