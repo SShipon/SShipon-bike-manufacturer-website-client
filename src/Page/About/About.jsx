@@ -24,9 +24,8 @@ const About = () => {
                     <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
                       <blockquote>
                         <p class="text-lg font-medium">
-                          I am a motivated team player and aspiring web
-                          developer with great web designer SEO/GoogleAds
-                          charismas.
+                          Hi I am shipon web application Engineer, Fontend
+                          Developer,Professional Web designer 
                         </p>
                       </blockquote>
                       <figcaption class="font-medium">

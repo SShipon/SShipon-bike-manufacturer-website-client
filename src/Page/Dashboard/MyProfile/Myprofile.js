@@ -8,18 +8,14 @@ const MyProfile = () => {
   const [user] = useAuthState(auth);
 
   const [profile, setProfile] = useState([]);
-  
 
   useEffect(() => {
-    fetch(
-      `https://immense-reef-29849.herokuapp.com/profile?email=${user?.email}`,
-      {
-        method: "GET",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      }
-    )
+    fetch(`http://localhost:5000/profile?email=${user?.email}`, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+      },
+    })
       .then((res) => res.json())
       .then((data) => setProfile(data));
   }, [user?.email]);
@@ -35,9 +31,9 @@ const MyProfile = () => {
           </div>
           <div className="flex justify-center mt-5">
             <div>
-               <Link to="/updateProfile">
+              <Link to="/updateProfile">
                 <button className="hero-btn rounded-full">Edit Profile</button>
-              </Link> 
+              </Link>
             </div>
           </div>
         </div>

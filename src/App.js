@@ -22,13 +22,16 @@ import Home from "./Page/Home/Home";
 import Information from "./Page/Information/Information";
 import Footer from "./Page/Shared/Footer/Footer.jsx";
 import NotFound from "./Page/Shared/NotFound/NotFound.jsx";
+import TsParticles from "./Page/Shared/TsParticles/TsParticles.jsx";
 
 
 
 function App() {
   return (
     <div className="App">
+      
       <Header></Header>
+      <TsParticles/>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="Home" element={<Home></Home>}></Route>

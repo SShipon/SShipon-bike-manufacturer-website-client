@@ -1,8 +1,13 @@
 import useProducts from '../hooks/useProduct';
 import Product from '../Product/Product';
+import Loading from '../Shared/Loading.js';
 
 const Products = () => {
-    const [products] = useProducts();
+  const [products] = useProducts();
+  
+  if (products.length === 0) {
+    return <Loading></Loading>
+  }
     return (
       <div>
         <h1 className="text-3xl uppercase text-center font-bold mt-8 text-teal-300">

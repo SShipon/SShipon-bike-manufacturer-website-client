@@ -4,6 +4,7 @@ import Parts from './Parts';
 
 const AllParts = () => {
     const [products] = useProducts()
+    
     return (
         <div>
             <h1 className='text-3xl uppercase text-center font-bold mt-8 text-teal-600'>our products</h1>

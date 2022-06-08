@@ -12,7 +12,7 @@ const UpdateProfile = () => {
 
   const onSubmit = (data, e) => {
     console.log(data);
-    const url = `https://immense-reef-29849.herokuapp.com/profile/${user.email}`;
+    const url = `http://localhost:5000/profile/${user.email}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -115,10 +115,9 @@ const UpdateProfile = () => {
             <div>
               <button
                 style={{
-                 
                   padding: "20px 30px",
                   background: "rgb(14, 66, 66)",
-                  color:'#ffff'
+                  color: "#ffff",
                 }}
                 type="submit"
                 className="hero-btn rounded-full"
