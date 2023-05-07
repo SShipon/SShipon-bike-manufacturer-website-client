@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery("user", () =>
-    fetch("http://localhost:5000/user", {
+    fetch("https://bike-manufacturer-website-server-site.onrender.com/user", {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

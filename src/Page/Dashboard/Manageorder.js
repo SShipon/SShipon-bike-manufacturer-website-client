@@ -9,7 +9,7 @@ const Manageorder = () => {
 
   useEffect(() => {
     if (user) {
-      const url = `http://localhost:5000/allorder?customerEmail=${user?.email}`;
+      const url = `https://bike-manufacturer-website-server-site.onrender.com/allorder?customerEmail=${user?.email}`;
       fetch(url)
         .then((res) => res.json())
         .then((data) => setProducts(data));
@@ -27,7 +27,7 @@ const Manageorder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.value) {
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `https://bike-manufacturer-website-server-site.onrender.com/order/${id}`;
         fetch(url, {
           method: "DELETE",
         })

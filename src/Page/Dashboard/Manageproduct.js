@@ -12,7 +12,7 @@ const Manageproduct = () => {
 
   useEffect(() => {
     const getItem = async () => {
-      const url = `http://localhost:5000/manageproduct`;
+      const url = `https://bike-manufacturer-website-server-site.onrender.com/manageproduct`;
       try {
         const { data } = await axios.get(url, {
           headers: {
@@ -41,7 +41,7 @@ const Manageproduct = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.value) {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://bike-manufacturer-website-server-site.onrender.com/product/${id}`;
         console.log(url);
         fetch(url, {
           method: "DELETE",

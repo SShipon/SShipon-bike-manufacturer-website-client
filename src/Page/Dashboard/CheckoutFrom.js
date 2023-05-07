@@ -13,7 +13,7 @@ const CheckoutFrom = ({ product }) => {
   const { _id, totalprice, productName, customerName } = product;
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://bike-manufacturer-website-server-site.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -74,7 +74,7 @@ const CheckoutFrom = ({ product }) => {
         product: _id,
         transactionId: paymentIntent.id,
       };
-      fetch(`http://localhost:5000/order/${_id}`, {
+      fetch(`https://bike-manufacturer-website-server-site.onrender.com/order/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

@@ -32,7 +32,7 @@ const Addproduct = () => {
             img: image,
           };
 
-          const url = `http://localhost:5000/addproduct`;
+          const url = `https://bike-manufacturer-website-server-site.onrender.com/addproduct`;
           fetch(url, {
             method: "POST",
             body: JSON.stringify(product),

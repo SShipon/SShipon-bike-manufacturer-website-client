@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 const Payment = () => {
   const { id } = useParams();
 
-  const url = `http://localhost:5000/order/${id}`;
+  const url = `https://bike-manufacturer-website-server-site.onrender.com/order/${id}`;
 
   const { data: product, isLoading } = useQuery(["order", id], () =>
     fetch(url, {
