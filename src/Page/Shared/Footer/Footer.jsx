@@ -3,7 +3,7 @@ import DateFooter from '../DateFooter/DateFooter.jsx';
 import FooterIcon from '../FooterIcon/FooterIcon.jsx';
 const Footer = () => {
     return (
-      <section style={{ background: "black" }} className="mt-28">
+      <section style={{ background: "black" }} className="">
         <footer style={{ color: "white" }} className=" p-10  ">
           <div className="footer">
             <div >

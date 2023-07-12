@@ -6,8 +6,8 @@ const About = () => {
   
 
     return (
-      <section className="max-w-7xl mx-auto px-12 banner bg-color py-10">
-        <div>
+      <section className="banner bg-color">
+        <div className='mx-12'>
           <h3 className="text-5xl text-center p-5 text-white">MY PORTFOLIO</h3>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10 flex justify-center ">
             <div>
@@ -114,7 +114,7 @@ const About = () => {
                 <hr />
                 <div className="text-white">
                   <ul>
-                    <li>Linkedin:(Not)</li>
+                    <li>Linkedin: <a href="https://www.linkedin.com/in/sh-shipon-5373b9241/"><span className=' text-cyan-500'>Click Me</span></a></li> 
                     <li>Email: nxshipon@gmail.com</li>
                     <li>Address: Cumilla,Chittagong,Bangladesh</li>
                     <li>Phone: +8801969846914</li>
@@ -126,7 +126,7 @@ const About = () => {
                   MY PROJECTS
                 </h4>
                 <hr />
-                <div className="text-white">
+                <div className="text-white p-8">
                   <ul>
                     <li>
                       <a href="https://travel-tour-5fac8.web.app/">

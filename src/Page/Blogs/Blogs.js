@@ -1,5 +1,4 @@
 import React from 'react';
-import ReviewCard from '../Dashboard/ReviewCard';
 
 const Blogs = () => {
     return (
@@ -96,8 +95,6 @@ const Blogs = () => {
             </p>
           </div>
         </div>
-
-        <ReviewCard></ReviewCard>
       </section>
     );
 };
