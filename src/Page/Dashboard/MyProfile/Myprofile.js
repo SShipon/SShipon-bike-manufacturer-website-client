@@ -10,7 +10,7 @@ const MyProfile = () => {
   const [profile, setProfile] = useState([]);
 
   useEffect(() => {
-    fetch(`https://bike-manufacturer-website-server-site.onrender.com/profile?email=${user?.email}`, {
+    fetch(`http://localhost:5000/profile?email=${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

@@ -12,7 +12,7 @@ const MyOrder = () => {
 
   useEffect(() => {
     if (user) {
-      const url = `https://bike-manufacturer-website-server-site.onrender.com/order?customerEmail=${user?.email}`;
+      const url = `http://localhost:5000/order?customerEmail=${user?.email}`;
       fetch(url, {
         method: "GET",
         headers: {
@@ -43,7 +43,7 @@ const MyOrder = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.value) {
-        const url = `https://bike-manufacturer-website-server-site.onrender.com/order/${id}`;
+        const url = `http://localhost:5000/order/${id}`;
         fetch(url, {
           method: "DELETE",
         })

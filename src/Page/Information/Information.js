@@ -11,7 +11,7 @@ const Information = () => {
   const [num, setNum] = useState(30);
 
   useEffect(() => {
-    const url = `https://bike-manufacturer-website-server-site.onrender.com/product/${id}`;
+    const url = `http://localhost:5000/product/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProduct(data[0]));
@@ -63,7 +63,7 @@ const Information = () => {
     };
     console.log(order);
 
-    fetch(`https://bike-manufacturer-website-server-site.onrender.com/order/${id}`, {
+    fetch(`http://localhost:5000/order/${id}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
