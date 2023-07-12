@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../firebase.init";
 import Review from "./Review";
+import Slider from "react-slick";
 
 const ReviewCard = () => {
   const [user] = useAuthState(auth);
@@ -13,20 +14,67 @@ const ReviewCard = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, [user]);
+
+/*  add */
+
+  var settings = {
+    autoplay: true,
+     dots: true,
+     infinite: true,
+     speed: 500,
+     horizontal: true,
+     horizontalSwiping: true,
+     slidesToShow: 3,
+     slidesToScroll: 3,
+ 
+     responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 3,
+           slidesToScroll: 3,
+           infinite: true,
+           dots: true,
+         },
+       },
+       
+       {
+         breakpoint: 600,
+         settings: {
+           slidesToShow: 2,
+           slidesToScroll: 2,
+           initialSlide: 2,
+         },
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+         },
+       },
+     ],
+   };
+
+
   return (
-    <div className="text-center">
-      <h2 className="text-4xl font-bold text-teal-400">Our Reviews</h2>
-      <div className="flex justify-center items-center my-12">
-        <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box">
-          {reviews.map((review) => (
-            <Review key={review._id} review={review}></Review>
-          ))}
+   
+    <section className="sm:mx-14">
+        <div className="my-8">
+        <h3 className="text-gradient_color text-center sm:text-2xl lg:text-2xl font-bold">review{reviews.length}</h3>
         </div>
-      </div>
-      <div>
+        <>
+          <Slider {...settings}>
+            {reviews.map((review) => (
+              <Review key={review._id} review={review}></Review>
+            ))}
+          </Slider>
+        </>
+        <div>
         <Link to="/dashboard/review">Review</Link>
       </div>
-    </div>
+    </section>
+
   );
 };
 

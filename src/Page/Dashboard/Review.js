@@ -2,6 +2,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { FaStar } from 'react-icons/fa';
 import auth from '../../firebase.init';
 
+
 const Review = ({ review }) => {
     const { rating, customerFeedback,name,email } = review;
     const [user] = useAuthState(auth)
@@ -13,32 +14,32 @@ const Review = ({ review }) => {
     } 
 
     return (
-      <div className="carousel-item ">
-        <div className="card w-48 bg-base-100 shadow-xl">
-          <figure>
+    
+      <div className="card sm:w-[350px] sm:h-[350px] md:w-[350px] md:h-[350px] lg:w-[350px] lg:h-[350px] mx-8 bg-cyan-100 shadow-xl">
+      <figure>
             <img
               src={user?.photoURL}
               className="rounded-full mt-8"
               alt="User"
             />
           </figure>
-          <div className="card-body">
-            <h2 className="text-center font-bold text-xl">{name}</h2>
-            <h6 className="text-center font-bold text-xl">{email}</h6>
-            <p className="flex mx-5 mb-3">
-              {stars.map((_, index) => {
+      <div className="card-body">
+        <h2 className="card-title">{name}</h2>
+        <h6>{email}</h6>
+        <p> {stars.map((_, index) => {
                 return (
                   <FaStar
                     key={index}
                     color={rating > index ? colors.orange : colors.gray}
                   />
                 );
-              })}
-            </p>
-            <p>{customerFeedback}</p>
-          </div>
-        </div>
+              })}</p>
+
+       <p>{customerFeedback}</p>
+        
       </div>
+    </div>
+
     );
 };
 

@@ -44,6 +44,7 @@ const MyReview = () => {
           Swal.fire("Thank you!!", "Your review succed", "success");
         }
       });
+     
   };
 
   return (

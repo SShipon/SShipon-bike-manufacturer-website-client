@@ -1,10 +1,10 @@
 import React from 'react';
-import ReviewCard from '../Dashboard/ReviewCard';
 import Products from '../Products/Products';
 import Banner from './Banner/Banner.jsx';
 import Brand from './Brand/Brand.jsx';
 import CardInfo from './CardInfo/CardInfo.jsx';
 import Projects from './Projects/Projects.jsx';
+import ReviewCard from '../Dashboard/ReviewCard';
 
 const Home = () => {
     return (
@@ -13,7 +13,7 @@ const Home = () => {
         <Products></Products>
         <CardInfo></CardInfo>
         <Projects></Projects>
-        <ReviewCard></ReviewCard>
+         <ReviewCard></ReviewCard>
         <Brand></Brand>
       </div>
     );
