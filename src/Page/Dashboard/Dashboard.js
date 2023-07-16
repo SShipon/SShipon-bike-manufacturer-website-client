@@ -8,14 +8,14 @@ const Dashboard = () => {
     const [user] = useAuthState(auth)
     const [admin] = useAdmin(user);
     return (
-      <div className="drawer drawer-mobile">
+      <div className="drawer drawer-mobile   p-20">
         <input id="dashboard-side" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <Outlet></Outlet>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side ">
           <label htmlFor="dashboard-side" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-64 bg-zinc-300 text-base-content">
+          <ul className="menu overflow-y-auto w-64  text-base-content">
             {/* <!-- Sidebar content here --> */}
             <li>
               <Link to="/dashboard">My Profile</Link>

@@ -9,7 +9,7 @@ import ReviewCard from '../Dashboard/ReviewCard';
 const Home = () => {
     return (
       <div className="max-w-7xl mx-auto px-12">
-        <Banner></Banner>
+    
         <Products></Products>
         <CardInfo></CardInfo>
         <Projects></Projects>
