@@ -12,7 +12,7 @@ const UpdateProfile = () => {
 
   const onSubmit = (data, e) => {
     console.log(data);
-    const url = `http://localhost:5000/profile/${user.email}`;
+    const url = `https://bike-manufacturer-website-server-site.onrender.com/profile/${user.email}`;
     fetch(url, {
       method: "PUT",
       headers: {
